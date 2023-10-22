@@ -1,5 +1,5 @@
 //  app.js , PRIYA SHRUTHI KORRA
-
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-mongoose.connect("mongodb://localhost:27017/portfolio-user", {
+mongoose.connect(process.env.MONGOURL, {
   useNewUrlParser: "true",
 });
 mongoose.connection.on("error", (err) => {
