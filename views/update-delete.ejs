@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update/Delete Contact</title>
+    <link rel="stylesheet" href="/css/updateDeleteContact.css" />
+  </head>
+  <body>
+    <h2>Update/Delete Contact</h2>
+    <form action="/update-delete/<%= contact._id %>?_method=PUT" method="POST">
+      <label for="contactName">Contact Name:</label>
+      <input
+        type="text"
+        id="contactName"
+        name="contactName"
+        value="<%= contact.contactName %>"
+        required
+      />
+      <br />
+      <label for="contactNumber">Contact Number:</label>
+      <input
+        type="text"
+        id="contactNumber"
+        name="contactNumber"
+        value="<%= contact.contactNumber %>"
+        required
+      />
+      <br />
+      <label for="email">Email Address:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="<%= contact.email %>"
+        required
+      />
+      <br />
+      <div class="actions">
+        <button type="submit">Update</button>
+      </div>
+    </form>
+
+    <form
+      action="/update-delete/<%= contact._id %>?_method=DELETE"
+      method="POST"
+    >
+      <div class="actions">
+        <button type="submit">Delete</button>
+      </div>
+    </form>
+
+    <a href="/contacts" class="cancel">Cancel</a>
+  </body>
+</html>

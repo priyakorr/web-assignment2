@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Business Contacts List</title>
+    <link rel="stylesheet" href="/css/secureContact.css" />
+  </head>
+  <body>
+    <h2>Business Contacts List</h2>
+    <table id="contacts-table">
+      <thead>
+        <tr>
+          <th>Contact Name</th>
+          <th>Contact Number</th>
+          <th>Email Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="contacts-list">
+        <% contacts.sort((a, b) =>
+        a.contactName.localeCompare(b.contactName)).forEach(contact => { %>
+        <tr>
+          <td><%= contact.contactName %></td>
+          <td><%= contact.contactNumber %></td>
+          <td><%= contact.email %></td>
+          <td class="actions">
+            <button>
+              <a href="/update-delete/<%= contact._id %>">Update/Delete</a>
+            </button>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

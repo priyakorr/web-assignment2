@@ -1,0 +1,35 @@
+<!-- contact.ejs , PRIYA SHRUTHI KORRA -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/contact.css" />
+  </head>
+  <body>
+    <header><%- include('partials/_nav') %></header>
+
+    <main>
+      <h1>Contact Me</h1>
+
+      <div class="contact-info">
+        <p>Email: priyakorra365@gmail.com</p>
+        <p>Phone: +1365-275-1675</p>
+        <p>Address: Chancellor drive, Scarborough</p>
+      </div>
+
+      <form action="/submit" method="POST">
+        <input type="text" name="firstName" placeholder="First Name" />
+        <input type="text" name="lastName" placeholder="Last Name" />
+        <input type="tel" name="contactNumber" placeholder="Contact Number" />
+        <input type="email" name="email" placeholder="Email Address" />
+        <textarea name="message" placeholder="Message"></textarea>
+        <center><button type="submit">Submit</button></center>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 PRIYA SHRUTHI KORRA. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
