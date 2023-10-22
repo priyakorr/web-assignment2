@@ -1,0 +1,115 @@
+/* services.css , PRIYA SHRUTHI KORRA*/
+
+/* CSS styles for services.ejs */
+
+/* Header styles */
+header {
+  background-color: #588157;
+  padding: 5px;
+}
+
+header img {
+  margin-right: auto;
+  height: 40px;
+  width: 40px;
+  border-radius: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/* Main content styles */
+main {
+  margin: 20px;
+  display: flex;
+  flex-direction: column; /* Display services in a column layout */
+  align-items: center; /* Center align services horizontally */
+}
+
+h1 {
+  text-decoration: underline;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.service {
+  display: flex; /* Display each service as a flex container */
+  flex-direction: column; /* Arrange service content in a column */
+  align-items: center; /* Center align service content horizontally */
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f7b267;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.service img {
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  text-decoration: underline;
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.service p {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+main div:last-child {
+  margin-bottom: 100px;
+}
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #588157;
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: #ccd5ae;
+}
